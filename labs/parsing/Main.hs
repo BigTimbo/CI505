@@ -10,3 +10,7 @@ import Log
 main :: IO ()
 main = putStrLn ""
           
+readLogFile :: FilePath -> IO [String]
+readLogFile fpath = do 
+	str <- readFile fpath
+	return (lines str)
